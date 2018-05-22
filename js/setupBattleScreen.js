@@ -10,7 +10,7 @@ function fillEnemyField(enemy){
     refreshEnemyInfo(enemy);
     document.getElementById("enemy-level").innerHTML = "Lvl: " + enemy.level.toString();
     var sprite = document.createElement("img");
-    sprite.setAttribute("src", "../sprites/" + enemy.sprite);
+    sprite.setAttribute("src", "../sprites/" + enemy.sprite.toLowerCase());
     document.getElementById("enemy-sprite").appendChild(sprite);
 }
 
@@ -25,7 +25,7 @@ function fillAllyField(ally){
     refreshAllyInfo(ally);
     document.getElementById("ally-level").innerHTML = "Lvl: " + ally.level.toString();
     var sprite = document.createElement("img");
-    sprite.setAttribute("src", "../sprites/" + ally.backSprite);
+    sprite.setAttribute("src", "../sprites/" + ally.backSprite.toLowerCase());
     document.getElementById("enemy-sprite").appendChild(sprite);
 }
 

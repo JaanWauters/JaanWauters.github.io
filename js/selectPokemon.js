@@ -15,7 +15,7 @@ function displayPokemonSelection(){
                 pokemonContainer.getElementsByClassName("type")[1].classList.add("hidden");
             }
             var sprite = document.createElement("img");
-            sprite.setAttribute("src", "../sprites/" + allSelectablePokemon[pokemon].sprite);
+            sprite.setAttribute("src", "../sprites/" + allSelectablePokemon[pokemon].sprite.toLowerCase());
             console.log(allSelectablePokemon[pokemon].sprite);
             pokemonContainer.getElementsByClassName("sprite")[0].appendChild(sprite);
             var baseStats = allSelectablePokemon[pokemon].baseStats;
