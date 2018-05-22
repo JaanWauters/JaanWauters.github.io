@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Battle</title>
+    <link type="text/css" href="../css/style.css">
+</head>
+<body>
+<h1>Battle!</h1>
+
+<button type="submit" onclick="showGameState()">Show game state</button>
+
+<div class="battle-container">
+    <div class="enemy-field" id="enemy-field">
+        <div class="info">
+            <span class="health" id="enemy-health"></span>
+            <span class="status" id="enemy-status"></span>
+            <span class="level" id="enemy-level"></span>
+        </div>
+        <div class="sprite" id="enemy-sprite"></div>
+    </div>
+    <div class="ally-field" id="ally-field">
+        <div class="info">
+            <span class="health" id="ally-health"></span>
+            <span class="status" id="ally-status"></span>
+            <span class="level" id="ally-level"></span>
+        </div>
+        <div class="sprite" id="ally-sprite"></div>
+    </div>
+    <div class="moves">
+        <button id="move1"></button>
+        <button id="move2"></button>
+        <button id="move3"></button>
+        <button id="move4"></button>
+    </div>
+</div>
+
+<script type="text/javascript" src="../js/typing.js"></script>
+<script type="text/javascript" src="../js/moves.js"></script>
+<script type="text/javascript" src="../js/effect.js"></script>
+<script type="text/javascript" src="../js/pokemon.js"></script>
+<script type="text/javascript" src="../js/weather.js"></script>
+<script type="text/javascript" src="../js/environment.js"></script>
+<script type="text/javascript" src="../js/storage.js"></script>
+<script type="text/javascript" src="../js/game.js"></script>
+<script type="text/javascript" src="../js/gamelogic.js"></script>
+<script type="text/javascript" src="../js/setupBattleScreen.js"></script>
+<script>
+    window.load = fillBattleScreen();
+</script>
+</body>
+</html>

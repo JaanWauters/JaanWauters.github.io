@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokemon Battle Simulator</title>
+    <link type="text/css" href="css/style.css">
+</head>
+<body>
+<h1>Pokemon Battle Simulator</h1>
+<form action="pages/selectPokemon.html">
+    <button type="submit" onclick="startNewGame()">Start</button>
+</form>
+
+<button type="submit" onclick="startNewGame()">Start 2</button>
+
+<script type="text/javascript" src="js/typing.js"></script>
+<script type="text/javascript" src="js/moves.js"></script>
+<script type="text/javascript" src="js/effect.js"></script>
+<script type="text/javascript" src="js/pokemon.js"></script>
+<script type="text/javascript" src="js/weather.js"></script>
+<script type="text/javascript" src="js/environment.js"></script>
+<script type="text/javascript" src="js/storage.js"></script>
+<script type="text/javascript" src="js/game.js"></script>
+<script type="text/javascript" src="js/gamelogic.js"></script>
+<script>
+    if((typeof Storage !== void(0))){
+        console.log("Storage exists!");
+    }
+</script>
+</body>
+</html>
