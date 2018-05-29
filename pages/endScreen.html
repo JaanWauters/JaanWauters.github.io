@@ -28,7 +28,7 @@
 <script>
     window.load = function () {
         var victory = getStoredItem("victory");
-        if (victory){
+        if (victory === true){
             document.getElementById("ending").innerHTML = "You win!";
         } else {
             document.getElementById("ending").innerHTML = "You lose!";
