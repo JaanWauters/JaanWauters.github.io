@@ -8,7 +8,7 @@ function Effect(raiseOrLower, applyStatusCondition, statusCondition, stat, perce
 }
 
 function applyEffect(attacker, defender, effect) {
-    var random = Math.ceil(Math.random() * 100);
+    var random = Math.ceil(Math.random() * 100); //TODO Implement apply status condition
     console.log(random);
     if(random <= effect.percentage) {
         if (effect.effectsSelf) {
@@ -19,7 +19,7 @@ function applyEffect(attacker, defender, effect) {
                     attacker.statChanges[effect.stat].bottom--;
                 }
                 console.log("Raised:", effect.stat);
-            } else {
+            } else if (effect.raiseOrLower === "lower"){
                 if (attacker.statChanges[effect.stat].top > attacker.statChanges[effect.stat].bottom) {
                     attacker.statChanges[effect.stat].top--;
                 } else if (attacker.statChanges[effect.stat].top <= attacker.statChanges[effect.stat].bottom && attacker.statChanges[effect.stat].bottom !== 8) {
@@ -35,7 +35,7 @@ function applyEffect(attacker, defender, effect) {
                     defender.statChanges[effect.stat].bottom--;
                 }
                 console.log("Raised:", effect.stat);
-            } else {
+            } else if (effect.raiseOrLower === "lower"){
                 if (defender.statChanges[effect.stat].top > defender.statChanges[effect.stat].bottom) {
                     defender.statChanges[effect.stat].top--;
                 } else if (defender.statChanges[effect.stat].top <= defender.statChanges[effect.stat].bottom && defender.statChanges[effect.stat].bottom !== 8) {

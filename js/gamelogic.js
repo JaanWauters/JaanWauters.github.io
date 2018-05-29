@@ -1,13 +1,13 @@
 var environment = new Environment();
 
 const KindOfMove = {
-  status : "status",    //TODO Gebruik dit als referencie/implementatie
+  status : "status",
   special :"special",
   physical : "physical"
 };
 
 const StatusConditions = {
-    burn : "burn",    //TODO Gebruik dit als referencie/implementatie
+    burn : "burn",
     freeze :"freeze",
     paralyze : "paralyze",
     sleep : "sleep",
@@ -17,7 +17,8 @@ const StatusConditions = {
 function calculateDamage(attackingPokemon, defendingPokemon, move){
     //TODO implement status conditions + confusion
     var incomingAttack = attackingPokemon.moveSet[move];
-    if(incomingAttack.kindOfMove !== KindOfMove.status) {
+    var random = Math.ceil(Math.random() * 100);
+    if(incomingAttack.kindOfMove !== KindOfMove.status && random <= incomingAttack.accuracy) {
         var attack = "attack";
         var defend = "defence";
         if (incomingAttack.kindOfMove === KindOfMove.special) {
@@ -88,10 +89,7 @@ function calcWeatherMod(incomingAttack){
 
 function criticalHit(){
     // https://bulbapedia.bulbagarden.net/wiki/Critical_hit
-    //TODO Implement ignore defensive stat changes/negative offensive changes
-    //TODO Check abilities for increased/decreased crit chance/boost in damage
-    //TODO Check items for increased/decreased chance
-    //TODO Check move for increased crit chance
+    //TODO A lot with critical hits
 
     var mod = 1;
     var baseChance = 24; //Kan 1/2/8/24 zijn
@@ -116,17 +114,35 @@ function performTurn(move) {
     //TODO Implement speed check
     var gameObj = getStoredObject("game");
     var updatedPokemon = attack(gameObj.chosenPokemon, gameObj.enemyPokemon, move); //Perform turn of player
-    gameObj.chosenPokemon = updatedPokemon[0];
-    gameObj.enemyPokemon = updatedPokemon[1];
-    refreshEnemyInfo(gameObj.enemyPokemon);
-    refreshAllyInfo(gameObj.chosenPokemon);
+    updatePokemon(gameObj, updatedPokemon[0], updatedPokemon[1]);
+    refreshAllInfo(gameObj);
+    checkForEnding(gameObj);
     var enemyMove = selectMoveEnemy();
     updatedPokemon = attack(gameObj.enemyPokemon, gameObj.chosenPokemon, enemyMove); //Perform turn of enemy
-    gameObj.enemyPokemon = updatedPokemon[0];
-    gameObj.chosenPokemon = updatedPokemon[1];
+    updatePokemon(gameObj, updatedPokemon[1], updatedPokemon[0]);
+    refreshAllInfo(gameObj);
+    checkForEnding(gameObj);
+    storeObject("game", gameObj);
+}
+
+function checkForEnding(gameObj){
+    if(gameObj.enemyPokemon.hpLeft <= 0){
+        storeSingleItem("victory", true);
+        window.location.href = "../pages/endScreen.html";
+    } else if(gameObj.chosenPokemon.hpLeft <= 0){
+        storeSingleItem("victory", false);
+        window.location.href = "../pages/endScreen.html";
+    }
+}
+
+function refreshAllInfo(gameObj){
     refreshEnemyInfo(gameObj.enemyPokemon);
     refreshAllyInfo(gameObj.chosenPokemon);
-    storeObject("game", gameObj);
+}
+
+function updatePokemon(gameObj, ally, enemy){
+    gameObj.chosenPokemon = ally;
+    gameObj.enemyPokemon = enemy;
 }
 
 function attack(attacker, defender, move){

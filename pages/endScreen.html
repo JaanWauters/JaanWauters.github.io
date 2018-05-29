@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>End Screen</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="manifest" href="../manifest.json">
+</head>
+<body>
+<div class="main-container">
+    <h1 id="ending"></h1>
+    <form action="selectPokemon.html">
+        <button type="submit" onclick="startNewGame()">Play again!</button>
+    </form>
+</div>
+
+<script type="text/javascript" src="../sw.js"></script>
+<script type="text/javascript" src="../js/typing.js"></script>
+<script type="text/javascript" src="../js/moves.js"></script>
+<script type="text/javascript" src="../js/effect.js"></script>
+<script type="text/javascript" src="../js/pokemon.js"></script>
+<script type="text/javascript" src="../js/weather.js"></script>
+<script type="text/javascript" src="../js/environment.js"></script>
+<script type="text/javascript" src="../js/storage.js"></script>
+<script type="text/javascript" src="../js/game.js"></script>
+<script type="text/javascript" src="../js/gamelogic.js"></script>
+<script>
+    window.load = function () {
+        var victory = getStoredItem("victory");
+        if (victory){
+            document.getElementById("ending").innerHTML = "You win!";
+        } else {
+            document.getElementById("ending").innerHTML = "You lose!";
+        }
+    }
+</script>
+</body>
+</html>

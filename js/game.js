@@ -55,39 +55,46 @@ function setPokemon(){
 
 function setMoves() {
     movesGardevoir = {
-        "move1": new Move("Psychic", 90, 10, "special", types.psychic, true, 100),
-        "move2": new Move("Psychic", 90, 10, "special", types.psychic, true, 100),
-        "move3": new Move("Psychic", 90, 10, "special", types.psychic, true, 100),
-        "move4": new Move("Psychic", 90, 10, "special", types.psychic, true, 100)
-    }; //TODO fix me
+        "move1": new Move("Psychic", 90, 10, "special", types.psychic, true, 100,
+            [new Effect("lower", false, null, "specialDefence", 10, false)]),
+        "move2": new Move("Calm Mind", null, 15, "status", types.psychic, true, null,
+            [new Effect("raise", false, null, "specialAttack", 100, true),
+                new Effect("raise", false, null, "specialDefence", 100, true)]),
+        "move3": new Move("Moonblast", 95, 10, "special", types.fairy, true, 100,
+            [new Effect("lower", false, null, "specialAttack", 30, false)]),
+        "move4": new Move("Shadow Ball", 80, 10, "special", types.ghost, true, 100,
+            [new Effect("lower", false, null, "specialDefence", 10, false)])
+    };  //TODO Make effects cleaner?
     movesGengar = {
         "move1": new Move("Psychic", 90, 10, "special", types.psychic, true, 100,
             [new Effect("lower", false, null, "specialDefence", 10, false)]),
         "move2": new Move("Shadow Ball", 80, 10, "special", types.ghost, true, 100,
             [new Effect("lower", false, null, "specialDefence", 10, false)]),
         "move3": new Move("Calm Mind", null, 15, "status", types.psychic, true, null,
-            [new Effect("raise", false, null, "specialAttack", 100, true),  //TODO Make this cleaner
+            [new Effect("raise", false, null, "specialAttack", 100, true),
                 new Effect("raise", false, null, "specialDefence", 100, true)]),
         "move4": new Move("Sludge Bomb", 85, 15, "special", types.poison, false, 90)
-    }; //TODO Check effects and make cleaner
+    }; //TODO Check effects and make cleaner?
     movesCharizard = {
-        "move1": new Move("Tackle", 50, 30, "physical", types.normal, false, 100),
-        "move2": new Move("Tackle", 50, 30, "physical", types.normal, false, 100),
-        "move3": new Move("Tackle", 50, 30, "physical", types.normal, false, 100),
-        "move4": new Move("Tackle", 50, 30, "physical", types.normal, false, 100)
-    }; //TODO Change me
+        "move1": new Move("Fire Blast", 110, 5, "special", types.fire, true, 85,
+            [new Effect(null, true, "burn", null, 10, false)]),
+        "move2": new Move("Flamethrower", 90, 15, "special", types.fire, true, 100,
+            [new Effect(null, true, "burn", null, 10, false)]),
+        "move3": new Move("Dragon Claw", 80, 15, "physical", types.dragon, false, 100),
+        "move4": new Move("Earthquake", 100, 10, "physical", types.ground, false, 100)
+    }; //TODO implement statusCondition changes?
     movesGreninja = {
-        "move1": new Move("Tackle", 50, 30, "physical", types.normal, false, 100),
-        "move2": new Move("Tackle", 50, 30, "physical", types.normal, false, 100),
-        "move3": new Move("Tackle", 50, 30, "physical", types.normal, false, 100),
-        "move4": new Move("Tackle", 50, 30, "physical", types.normal, false, 100)
-    }; //TODO Change me
+        "move1": new Move("Hydro Pump", 110, 5, "special", types.water, false, 80),
+        "move2": new Move("Gunk Shot", 120, 5, "physical", types.poison, false, 80),
+        "move3": new Move("Ice Beam", 90, 10, "special", types.ice, false, 100,
+            [new Effect(null, true, "freeze", null, 10, false)]),
+        "move4": new Move("Extrasensory", 80, 20, "physical", types.psychic, false, 100)
+    };
 }
 
 function startNewGame(){
     setTypes();
     setMoves();
-    console.log(types);
     setPokemon();
     var game = new Game();
     storeObject("game", game);
