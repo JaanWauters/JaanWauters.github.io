@@ -15,7 +15,7 @@ const StatusConditions = {
 };
 
 function calculateDamage(attackingPokemon, defendingPokemon, move){
-    //TODO implement stat changes
+    //TODO implement status conditions + confusion
     var incomingAttack = attackingPokemon.moveSet[move];
     if(incomingAttack.kindOfMove !== KindOfMove.status) {
         var attack = "attack";

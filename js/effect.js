@@ -4,10 +4,8 @@ function Effect(raiseOrLower, applyStatusCondition, statusCondition, stat, perce
     this.statusCondition = statusCondition;
     this.stat = stat;
     this.percentage = percentage;
-    //this.amount = amount;
     this.effectsSelf = effectsSelf;
 }
-//TODO Implement amount of changes
 
 function applyEffect(attacker, defender, effect) {
     var random = Math.ceil(Math.random() * 100);

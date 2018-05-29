@@ -2,39 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Select Pokemon</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="manifest" href="../manifest.json">
 </head>
 <body>
-<h1>Select your pokemon</h1>
+<div class="main-container">
+    <h1>Select your pokemon</h1>
 
-<div id="pokemon-container">
-    <div class="pokemon hidden" id="dummy">
-        <h3 class="name">Pokemon name</h3>
-        <span class="type">Type 1</span>
-        <span class="type">Type 2</span>
-        <div class="sprite"></div>
-        <p class="basestats">Base stats
+    <div id="pokemon-container">
+        <div class="pokemon hidden" id="dummy">
+            <h3 class="name">Pokemon name</h3>
+            <div class="sprite"></div>
+            <div class="types">
+                <span class="type">Type 1</span>
+                <span class="type">Type 2</span>
+            </div>
+            <p class="basestats">Base stats
 
-        </p>
-        <p class="moveset">Move set
+            </p>
+            <p class="moveset">Move set
 
-        </p>
-        <form action="battle.html">
-            <button type="submit" class="select-button">Select pokemon</button>
-        </form>
-        <!--<button type="submit" class="select-button">Select pokemon</button>-->
+            </p>
+            <form action="battle.html">
+                <button type="submit" class="select-button">Select pokemon</button>
+            </form>
+        </div>
+
     </div>
+    <!--<button type="submit" onclick="showGameState()">Show game state</button>-->
 
+    <form action="../index.html">
+        <button type="submit">Home</button>
+    </form>
 </div>
-<button type="submit" onclick="showGameState()">Show game state</button>
-
-<form action="../index.html">
-    <button type="submit">Home</button>
-</form>
-
-<button type="submit" onclick="choosePokemon('gardevoir')">Battle!</button>
 
 <script type="text/javascript" src="../sw.js"></script>
 <script type="text/javascript" src="../js/typing.js"></script>

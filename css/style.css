@@ -1,3 +1,395 @@
+/*For all formats*/
+
+body {
+    font-family: Arial, sans-serif, helvetica;
+}
+
+h1 {
+    text-align: center;
+}
+
 .hidden {
     display: none;
+}
+
+.main-container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-container form {
+    text-align: center;
+}
+
+.pokemon {
+    width: 45%;
+    float: left;
+    min-width: 200px;
+    min-height: 550px;
+    border: black 1px solid;
+    margin: 1%;
+}
+
+.pokemon .sprite {
+    height: 200px;
+    width: 200px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pokemon .sprite img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.pokemon .types {
+    text-align: center;
+}
+
+.pokemon .types .type {
+    display: inline-block;
+    line-height: 1.5;
+    width: 75px;
+    text-transform: capitalize;
+}
+
+.pokemon .moveset {
+    width: 100%;
+    text-align: center;
+}
+
+.pokemon .moveset ul li {
+    display: inline-block;
+    width: 21%;
+    line-height: 1.5;
+    float: left;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.pokemon .basestats {
+    width: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pokemon .basestats ul li span {
+    width: 50%;
+}
+
+.pokemon .basestats ul li span:first-child {
+    float: left;
+    text-align: left;
+}
+
+.pokemon .basestats ul li span:last-child {
+    float: right;
+    text-align: right;
+}
+
+.pokemon p {
+    font-weight: bold;
+}
+
+.pokemon ul{
+    list-style: none;
+    padding-left: 0;
+    font-weight: normal;
+    text-transform: capitalize;
+}
+
+.pokemon h3 {
+    text-align: center;
+}
+
+.pokemon form button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.battle-container {
+    height: 500px;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    border: black 1px solid;
+}
+
+.status {
+    text-transform: capitalize;
+}
+
+.enemy-field {
+    width: 100%;
+    height: 50%;
+    background-color: rgba(255,0,0,0.5);
+    border-bottom: black 1px solid;
+}
+
+.enemy-field .info {
+    width: 45%;
+    float: left;
+    height: 20%;
+    border: black 1px solid;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: white;
+}
+
+.enemy-field .info .name, .enemy-field .info .status,
+.ally-field .info .name, .ally-field .info .status {
+    width: 45%;
+    float: left;
+}
+
+.enemy-field .info .level, .enemy-field .info .health,
+.ally-field .info .level, .ally-field .info .health {
+    width: 45%;
+    float: right;
+    text-align: right;
+}
+
+.enemy-field .info .status, .enemy-field .info .health,
+.ally-field .info .status, .ally-field .info .health {
+    margin-top: 5.5%;
+}
+
+.enemy-field .sprite, .ally-field .sprite {
+    height: 200px;
+    width: 50%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    float: right;
+}
+
+.enemy-field .sprite img, .ally-field .sprite img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.ally-field {
+    width: 100%;
+    height: 50%;
+    background-color: rgba(211,211,211,0.5);
+}
+
+.ally-field .info {
+    float: right;
+    width: 45%;
+    height: 20%;
+    border: black 1px solid;
+    margin-right: 10px;
+    margin-top: 10px;
+    background-color: white;
+}
+
+.ally-field .sprite{
+    float: left;
+}
+
+/* TODO Fix mobile + really small screen battle*/
+
+/*Media screens*/
+
+@media screen and (max-width: 800px){
+    .pokemon .moveset ul li {
+        display: inline-block;
+        width: 46%;
+        line-height: 1.5;
+        float: left;
+        margin: 2%;
+    }
+
+    .pokemon .basestats {
+        width: 80%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .pokemon .moveset ul li {
+        display: inline-block;
+        width: 76%;
+        line-height: 1.5;
+        float: left;
+        margin: 2% 12% 2% 12%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .pokemon {
+        width: 90%;
+        float: left;
+        min-width: 200px;
+        min-height: 550px;
+        border: black 1px solid;
+        margin: 1%;
+    }
+}
+
+@media screen and (min-width: 650px){
+    .battle-container {
+        height: 500px;
+        width: 590px;
+        margin-right: auto;
+        margin-left: auto;
+        border: black 1px solid;
+    }
+}
+
+@media screen and (max-width: 350px){
+    .enemy-field .info {
+        float: left;
+        width: 27%;
+        height: 35%;
+        border: black 1px solid;
+        margin-right: 10px;
+        margin-top: 10px;
+        background-color: white;
+    }
+
+    .ally-field .info {
+        float: right;
+        width: 27%;
+        height: 35%;
+        border: black 1px solid;
+        margin-right: 10px;
+        margin-top: 10px;
+        background-color: white;
+    }
+
+    .enemy-field .info .name, .enemy-field .info .status,
+    .ally-field .info .name, .ally-field .info .status {
+        width: 90%;
+        float: left;
+    }
+
+    .enemy-field .info .level, .enemy-field .info .health,
+    .ally-field .info .level, .ally-field .info .health {
+        width: 90%;
+        float: left;
+        text-align: left;
+    }
+
+    .enemy-field .info .status, .enemy-field .info .health,
+    .ally-field .info .status, .ally-field .info .health {
+        margin-top: 5.5%;
+    }
+}
+
+/*
+Types
+*/
+
+.fairy {
+    background-color: hotpink;
+}
+.normal {
+    background-color: whitesmoke;
+}
+.ghost {
+    background-color: mediumpurple;
+}
+.fighting {
+    background-color: brown;
+}
+.psychic {
+    background-color: deeppink;
+}
+.poison {
+    background-color: purple;
+}
+.fire {
+    background-color: red;
+}
+.water {
+    background-color: dodgerblue;
+}
+.grass {
+    background-color: forestgreen;
+}
+.electric {
+    background-color: yellow;
+}
+.ice {
+    background-color: deepskyblue;
+}
+.ground {
+    background-color: sandybrown;
+}
+.flying {
+    background-color: cadetblue;
+}
+.dragon {
+    background-color: midnightblue;
+}
+.bug {
+    background-color: darkolivegreen;
+}
+.rock {
+    background-color: saddlebrown;
+}
+.steel {
+    background-color: gray;
+}
+.dark {
+    background-color: black;
+    color: white;
+}
+
+/*Type background colors*/
+
+.fire-background {
+    background-color: rgba(255,0,0,0.5);
+}
+.water-background {
+    background-color: rgba(30,144,255,0.5);
+}
+.ghost-background {
+    background-color: rgba(147,112,219,0.5);
+}
+.fairy-background {
+    background-color: rgba(255,105,180,0.5);
+}
+
+/*
+Status conditions
+*/
+
+.paralyze {
+   background-color: yellow;
+}
+.burn {
+    background-color: red;
+}
+.freeze {
+    background-color: deepskyblue;
+}
+.sleep {
+    background-color: lightgray;
+}
+.poison {
+    background-color: purple;
 }

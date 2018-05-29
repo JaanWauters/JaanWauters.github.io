@@ -6,7 +6,7 @@ function Pokemon(name, type1, type2, baseStats, moveSet){
     this.stats = generateStats(baseStats);
     this.moveSet = moveSet; //dict of moves
     this.statChanges = generateStatChangeDict(); //dict of statChanges
-    this.statusCondition = null;
+    this.statusCondition = "paralyze"; // TODO Set back to null
     this.confused = false;
     this.level = 100;
     this.sprite = name + ".gif".toLowerCase();
