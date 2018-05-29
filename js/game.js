@@ -114,3 +114,10 @@ function choosePokemon(pokemonName){
     console.log("gameobj:", gameObj);
     storeObject("game", gameObj);
 }
+
+function showEnd(){
+    var victory = getStoredItem("victory");
+    console.log(victory);
+    document.getElementById("ending").innerText = "You " + victory + "!";
+
+}

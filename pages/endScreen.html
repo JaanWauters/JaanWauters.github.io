@@ -26,14 +26,7 @@
 <script type="text/javascript" src="../js/game.js"></script>
 <script type="text/javascript" src="../js/gamelogic.js"></script>
 <script>
-    window.load = function () {
-        var victory = getStoredItem("victory");
-        if (victory === true){
-            document.getElementById("ending").innerHTML = "You win!";
-        } else {
-            document.getElementById("ending").innerHTML = "You lose!";
-        }
-    }
+    window.load = showEnd();
 </script>
 </body>
 </html>

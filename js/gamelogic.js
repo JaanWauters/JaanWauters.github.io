@@ -127,10 +127,10 @@ function performTurn(move) {
 
 function checkForEnding(gameObj){
     if(gameObj.enemyPokemon.hpLeft <= 0){
-        storeSingleItem("victory", true);
+        storeSingleItem("victory", "win");
         window.location.href = "../pages/endScreen.html";
     } else if(gameObj.chosenPokemon.hpLeft <= 0){
-        storeSingleItem("victory", false);
+        storeSingleItem("victory", "lose");
         window.location.href = "../pages/endScreen.html";
     }
 }

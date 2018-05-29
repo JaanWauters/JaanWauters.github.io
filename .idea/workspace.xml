@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d310cd11-2c47-4ea8-b21e-052cf5e2fcdc" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/js/game.js" afterPath="$PROJECT_DIR$/js/game.js" />
+      <change beforePath="$PROJECT_DIR$/js/gamelogic.js" afterPath="$PROJECT_DIR$/js/gamelogic.js" />
       <change beforePath="$PROJECT_DIR$/pages/endScreen.html" afterPath="$PROJECT_DIR$/pages/endScreen.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -26,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="endScreen.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="endScreen.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/endScreen.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="58" lean-forward="false" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
+            <state relative-caret-position="476">
+              <caret line="28" column="28" lean-forward="false" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -39,8 +41,8 @@
       <file leaf-file-name="gamelogic.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/gamelogic.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="108" column="35" lean-forward="false" selection-start-line="108" selection-start-column="35" selection-end-line="108" selection-end-column="35" />
+            <state relative-caret-position="493">
+              <caret line="132" column="40" lean-forward="false" selection-start-line="132" selection-start-column="40" selection-end-line="132" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -59,18 +61,18 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="26" selection-end-column="62" />
+            <state relative-caret-position="187">
+              <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="game.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="game.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="94" column="9" lean-forward="false" selection-start-line="94" selection-start-column="9" selection-end-line="94" selection-end-column="9" />
+            <state relative-caret-position="759">
+              <caret line="120" column="73" lean-forward="false" selection-start-line="120" selection-start-column="73" selection-end-line="120" selection-end-column="73" />
               <folding>
                 <element signature="e#27#138#0" expanded="false" />
                 <element signature="e#164#275#0" expanded="false" />
@@ -132,10 +134,10 @@
         <option value="$PROJECT_DIR$/pages/selectPokemon.html" />
         <option value="$PROJECT_DIR$/pages/battle.html" />
         <option value="$PROJECT_DIR$/css/style.css" />
-        <option value="$PROJECT_DIR$/js/game.js" />
         <option value="$PROJECT_DIR$/js/effect.js" />
-        <option value="$PROJECT_DIR$/js/gamelogic.js" />
         <option value="$PROJECT_DIR$/pages/endScreen.html" />
+        <option value="$PROJECT_DIR$/js/gamelogic.js" />
+        <option value="$PROJECT_DIR$/js/game.js" />
       </list>
     </option>
   </component>
@@ -261,12 +263,12 @@
       <workItem from="1527001403839" duration="10596000" />
       <workItem from="1527425283472" duration="82000" />
       <workItem from="1527511441390" duration="19569000" />
-      <workItem from="1527597100070" duration="10690000" />
+      <workItem from="1527597100070" duration="11147000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129609000" />
+    <option name="totallyTimeSpent" value="130066000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -664,35 +666,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/pages/battle.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="26" selection-end-column="62" />
+        <state relative-caret-position="300">
+          <caret line="27" column="54" lean-forward="false" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/game.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="94" column="9" lean-forward="false" selection-start-line="94" selection-start-column="9" selection-end-line="94" selection-end-column="9" />
-          <folding>
-            <element signature="e#27#138#0" expanded="false" />
-            <element signature="e#164#275#0" expanded="false" />
-            <element signature="e#304#415#0" expanded="false" />
-            <element signature="e#443#554#0" expanded="false" />
-            <element signature="e#1512#2241#0" expanded="false" />
-            <element signature="e#2291#2947#0" expanded="false" />
-            <element signature="e#3009#3484#0" expanded="false" />
-            <element signature="e#3548#3959#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="187">
+          <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/gamelogic.js">
+    <entry file="file://$PROJECT_DIR$/pages/endScreen.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="108" column="35" lean-forward="false" selection-start-line="108" selection-start-column="35" selection-end-line="108" selection-end-column="35" />
+        <state relative-caret-position="476">
+          <caret line="28" column="28" lean-forward="false" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -705,19 +698,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/battle.html">
+    <entry file="file://$PROJECT_DIR$/js/gamelogic.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="27" column="54" lean-forward="false" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
+        <state relative-caret-position="493">
+          <caret line="132" column="40" lean-forward="false" selection-start-line="132" selection-start-column="40" selection-end-line="132" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/endScreen.html">
+    <entry file="file://$PROJECT_DIR$/js/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="58" lean-forward="false" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
-          <folding />
+        <state relative-caret-position="759">
+          <caret line="120" column="73" lean-forward="false" selection-start-line="120" selection-start-column="73" selection-end-line="120" selection-end-column="73" />
+          <folding>
+            <element signature="e#27#138#0" expanded="false" />
+            <element signature="e#164#275#0" expanded="false" />
+            <element signature="e#304#415#0" expanded="false" />
+            <element signature="e#443#554#0" expanded="false" />
+            <element signature="e#1512#2241#0" expanded="false" />
+            <element signature="e#2291#2947#0" expanded="false" />
+            <element signature="e#3009#3484#0" expanded="false" />
+            <element signature="e#3548#3959#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
