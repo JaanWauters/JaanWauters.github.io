@@ -36,21 +36,19 @@ var movesCharizard;
 var movesGreninja;
 const selectablePokemon = {}; //TODO make dynamic
 
+const pokemonNames = ["gardevoir", "charizard", "gengar", "greninja"];
+
 function Game(){
     this.chosenPokemon = null;
     this.enemyPokemon = null;
 }
 
 function setPokemon(){
-    /*if(!localStorage.getItem("pokemon")){*/
-        selectablePokemon.gardevoir = new Pokemon("Gardevoir", types.fairy, types.psychic, baseStatsGardevoir, movesGardevoir);
-        selectablePokemon.gengar = new Pokemon("Gengar", types.ghost, types.poison, baseStatsGengar, movesGengar);
-        selectablePokemon.charizard = new Pokemon("Charizard", types.fire, types.flying, baseStatsCharizard, movesCharizard);
-        selectablePokemon.greninja = new Pokemon("Greninja", types.water, types.dark, baseStatsGreninja, movesGreninja);
-        storeObject("pokemon", selectablePokemon);
-    /*} else {
-        console.log("Pokemon already stored."); //TODO Zet mij terug
-    }*/
+    selectablePokemon.gardevoir = new Pokemon("Gardevoir", types.fairy, types.psychic, baseStatsGardevoir, movesGardevoir);
+    selectablePokemon.gengar = new Pokemon("Gengar", types.ghost, types.poison, baseStatsGengar, movesGengar);
+    selectablePokemon.charizard = new Pokemon("Charizard", types.fire, types.flying, baseStatsCharizard, movesCharizard);
+    selectablePokemon.greninja = new Pokemon("Greninja", types.water, types.dark, baseStatsGreninja, movesGreninja);
+    storeObject("pokemon", selectablePokemon);
 }
 
 function setMoves() {
@@ -110,7 +108,8 @@ function choosePokemon(pokemonName){
     var gameObj = getStoredObject("game");
     var pokemonObj = getStoredObject("pokemon");
     gameObj.chosenPokemon = pokemonObj[pokemonName]; //TODO Make dynamic
-    gameObj.enemyPokemon = pokemonObj['charizard']; //TODO Make random
+    var pok = pokemonNames[Math.floor(Math.random() * 4)];
+    gameObj.enemyPokemon = pokemonObj[pok]; //TODO Make random
     console.log("gameobj:", gameObj);
     storeObject("game", gameObj);
 }
