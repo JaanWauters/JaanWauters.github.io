@@ -15,7 +15,6 @@ const StatusConditions = {
 };
 
 function calculateDamage(attackingPokemon, defendingPokemon, move){
-    //TODO implement status conditions + confusion
     var incomingAttack = attackingPokemon.moveSet[move];
     var random = Math.ceil(Math.random() * 100);
     if(incomingAttack.kindOfMove !== KindOfMove.status && random <= incomingAttack.accuracy) {
@@ -89,7 +88,6 @@ function calcWeatherMod(incomingAttack){
 
 function criticalHit(){
     // https://bulbapedia.bulbagarden.net/wiki/Critical_hit
-    //TODO A lot with critical hits
 
     var mod = 1;
     var baseChance = 24; //Kan 1/2/8/24 zijn
@@ -104,14 +102,12 @@ function criticalHit(){
 }
 
 function selectMoveEnemy() {
-    //TODO implement logic
     var random = Math.ceil(Math.random() * 4);
     console.log("Enemy move:", random);
     return "move" + random;
 }
 
 function performTurn(move) {
-    //TODO Implement speed check
     var gameObj = getStoredObject("game");
     var updatedPokemon = attack(gameObj.chosenPokemon, gameObj.enemyPokemon, move); //Perform turn of player
     updatePokemon(gameObj, updatedPokemon[0], updatedPokemon[1]);

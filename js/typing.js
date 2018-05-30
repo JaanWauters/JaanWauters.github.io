@@ -33,7 +33,6 @@ function isSupperEffective(incomingAttack, defendingPokemon){
 }
 
 function setTypes(){
-    /*if(!localStorage.getItem("types")){*/
         types.normal = new Type("normal", [], [], ["ghost"]);
         types.ghost = new Type("ghost", ["psychic", "ghost"], ["poison", "bug"], ["normal", "fighting"]);
         types.fighting = new Type("fighting", ["ice", "rock", "steel", "dark", "normal"], ["bug", "rock", "dark"], []);
@@ -53,7 +52,4 @@ function setTypes(){
         types.steel = new Type("steel", ["ice", "rock", "fairy"], ["normal", "grass", "ice", "flying", "psychic", "bug", "rock", "dragon", "steel", "fairy"], []);
         types.dark = new Type("dark", ["psychic", "ghost"], ["ghost", "dark"], ["psychic"]);
         storeObject("types", types);
-    /*} else {
-        console.log("Types already stored."); //TODO Zet mij terug
-    }*/
 }

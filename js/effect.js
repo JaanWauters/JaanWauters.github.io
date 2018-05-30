@@ -8,7 +8,7 @@ function Effect(raiseOrLower, applyStatusCondition, statusCondition, stat, perce
 }
 
 function applyEffect(attacker, defender, effect) {
-    var random = Math.ceil(Math.random() * 100); //TODO Implement apply status condition
+    var random = Math.ceil(Math.random() * 100);
     console.log(random);
     if(random <= effect.percentage) {
         if (effect.effectsSelf) {

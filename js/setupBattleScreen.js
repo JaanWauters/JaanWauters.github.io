@@ -41,13 +41,8 @@ function refreshAllyInfo(ally){
 }
 
 function fillMoves(ally){
-    //TODO Make it a forloop and dynamic
-    document.getElementById("move1").innerHTML = ally.moveSet.move1.name;
-    document.getElementById("move1").setAttribute("onClick", "performTurn('move1')");
-    document.getElementById("move2").innerHTML = ally.moveSet.move2.name;
-    document.getElementById("move2").setAttribute("onClick", "performTurn('move2')");
-    document.getElementById("move3").innerHTML = ally.moveSet.move3.name;
-    document.getElementById("move3").setAttribute("onClick", "performTurn('move3')");
-    document.getElementById("move4").innerHTML = ally.moveSet.move4.name;
-    document.getElementById("move4").setAttribute("onClick", "performTurn('move4')");
+    for(var i = 1; i <= 4; i++){
+        document.getElementById("move" + i).innerHTML = ally.moveSet["move" + i].name;
+        document.getElementById("move" + i).setAttribute("onClick", "performTurn('move" + i + "')");
+    }
 }
